@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
 	fmt.Println("Welcome to my riddle game!")
@@ -30,7 +33,7 @@ func main() {
 	fmt.Printf("Here is the first riddle. What is at the end of a rainbow? ")
 	fmt.Scan(&answer1)
 
-	if answer1 == "W" {
+	if strings.EqualFold(answer1, "W") {
 		fmt.Println("Hmm...you got it, you safe for now")
 	} else {
 		fmt.Println("You are wrong, therefore dead")
@@ -40,7 +43,7 @@ func main() {
 	fmt.Printf("Here is the second riddle. What kind of goose fights with snakes? ")
 	fmt.Scan(&answer2)
 
-	if answer1 == "A mongoose" {
+	if strings.EqualFold(answer2, "mongoose") {
 		fmt.Println("Hmm...you got it, that is three. I don't like this. You safe for now")
 	} else {
 		fmt.Println("You are wrong, therefore dead")
@@ -50,7 +53,7 @@ func main() {
 	fmt.Printf("Here is the third riddle. What has an eye but can not see? ")
 	fmt.Scan(&answer3)
 
-	if answer1 == "A needle" {
+	if strings.EqualFold(answer3, "needle") {
 		fmt.Println("This leaves a bad taste in my mouth, but you win")
 	} else {
 		fmt.Println("Oh so you thought you would win, fucking loser...now time for you to die")
